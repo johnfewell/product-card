@@ -1,0 +1,120 @@
+$button-height: 45px
+$card-padding: 2em
+$card-extra-padding: 1em
+$img-dimension: 180px
+
+html,
+body
+    min-height: 100vh
+
+body
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #eeeeee
+    font-family: 'Lato', sans-serif
+
+.card
+    padding: $card-padding
+    position: relative
+    box-sizing: content-box
+    text-align: center
+    width: 14em
+    border-radius: 3px
+    background-color: white
+    justify-items: center
+    transition: all 0.2s
+
+    &:hover
+        padding-left: calc(#{$card-padding} + #{$card-extra-padding})
+        padding-right: calc(#{$card-padding} + #{$card-extra-padding})
+        padding-bottom: calc(#{$card-padding} + #{$button-height})
+        box-shadow: 0px 0px 8px 0px #b5b5b5
+
+    &:hover button
+        transition: .2s
+        opacity: 1
+        transform: translate(-50%, 0)
+
+    & img
+        height: $img-dimension
+        width: $img-dimension
+
+p
+    font-weight: 300
+    font-size: .9em
+    line-height: .1em
+
+.promotion
+    font-weight: 400
+    font-size: .8em
+    color: #C4941C
+
+.card h4
+    font-size: .9em
+    line-height: 1em
+    letter-spacing: 0.05em
+
+.card h5
+    font-weight: 300
+    font-size: 1.1em
+    line-height: .5em
+
+button
+    transition: all 0.2s
+    position: absolute
+    bottom: $card-padding
+    width: 220px
+    height: $button-height
+    color: white
+    background-color: black
+    border: none
+    border-radius: 1px
+    z-index: 0
+    opacity: 0
+    left: 50%
+    transform: translate(-50%, 200%)
+    letter-spacing: .05em
+
+.img-container
+    position: relative
+    margin-left: 20px
+    width: $img-dimension
+
+.overlay
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    height: $img-dimension
+    width: $img-dimension
+    opacity: 0
+    transition: .2s ease
+
+.card:hover .overlay
+    opacity: .9
+    background: rgba(0, 0, 0, 0.5)
+
+.icon
+    position: absolute
+    width: 40px
+    top: 50%
+    left: 50%
+    width: 60%
+    transform: translate(-50%, -50%)
+
+.btn-quick-view
+    font-size: .7em
+    background-color: darken(gray, 10%)
+    border: 1px solid #dbdbdb
+    border-radius: 1px
+    color: white
+    padding: 12px 16px
+    cursor: pointer
+    transition: .1s ease
+    letter-spacing: 0.15em
+    font-weight: 300
+
+    &:hover
+        background-color: darken(gray, 40%)
